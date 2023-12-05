@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento</title>
+    <style>
+/* Todos las referencias son del elemento contenedor, el viewport. Son algunos, hay mas*/
+        #principal { 
+            width: 800px; 
+            height: 800px; 
+            background-color: silver; 
+            margin: auto; /* Hace que el contenedor principal quede centrado */
+        }
+            #est { /* Es el que por defecto tienen todos, uno abajo del otro. Ubicado en el margen superior izquierdo de su contenedor. No atiende a propiedades como left y top, queda fijo */
+                width: 100px; 
+                height: 100px; 
+                background-color: grey; 
+                position:static
+            }
+            #abs { /* la referencia sigue siendo el punto del margen superior izquierdo del contenedor, pero siempre queda a la distancia especificada de ese punto. no le importa si hay otros elementos en esa posicion, lo ubica donde yo lo ponga y se superpone a demas cosas */
+                width: 100px; 
+                height: 100px; 
+                background-color: yellow;
+                position: absolute;
+                left: 200px;
+                top: 200px;
+            }
+            #rel { /* Es relativo al punto del margen superior izquierdo de su contenedor pero se modifica con propiedades left y top, entre otras. Es relativo a la posicion que ocuparia si fuera estatico */
+                width: 100px; 
+                height: 100px; 
+                background-color: lime; 
+                position: relative;
+                left: 150px;
+                top: 150px;
+            }
+            #fix { /* Siempre se mantiene a la distancia dicha, aunque yo scrolee siempre quedara en pantalla. Se va superponer a otros elementos y siempre queda en pantalla */
+                width: 100px; 
+                height: 100px; 
+                background-color: aqua;
+                position: fixed;
+                left: 200;
+                top: 400;
+
+            }
+    </style>
+</head>
+<body>
+    <main id="principal">
+
+        <div id="est">
+            <p>posición estática</p>
+        </div>
+        <div id="rel">
+            <p>posición relativa</p>
+        </div>
+        <div id="abs">
+            <p>posición absoluta</p>
+        </div>
+        <div id="fix">
+            <p>posición fija</p>
+        </div>
+        
+    </main>
+</body>
+</html>

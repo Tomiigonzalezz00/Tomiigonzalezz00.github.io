@@ -1,0 +1,52 @@
+*{
+    margin : 0px; /* simplifica mucho el maquetado */
+    padding: 0px;
+}
+
+div,p{
+    margin: 30px 0px;
+} 
+
+p{
+    color : red;
+    font-size: 130%;
+}
+
+#intro{
+    color: white;
+    background-color: violet;
+}
+
+.primer-clase{
+        font-size: xx-large; /* Medida relativa segun el viewport, se ve extra grande en la pantalla del dispositivo */
+}
+
+.fuente{
+    font-size: 200%;
+    color: green;
+}
+
+/* Selectores descendientes */
+aside p{ /* Son todos los parrafos que esten dentro del aside */
+    color: brown;
+    font-size: x-small;
+    font-weight: bold;
+}
+
+/* selectores hijos */
+p > strong{ /* Selector directo, contenido inmediatamente dentro del padre */
+    color: black;
+}
+
+p * strong{ /* Selector indirecto, no necesariamente contenido inmediatamente dentro del padre*/
+    color: pink;
+}
+
+/* selector de adyacencia*/
+p + footer{/* se aplica por estar a continuacion de una etiqueta p */
+    font-style: italic;
+}
+
+/*p *{ se aplica por estar a continuacion de p, sea cualquier elemento 
+    font-style: italic;
+}*/

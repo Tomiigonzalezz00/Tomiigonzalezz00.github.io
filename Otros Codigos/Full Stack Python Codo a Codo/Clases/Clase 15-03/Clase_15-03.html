@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Ejemplo de Formulario</h1>
+    <form action="" method="get"><!-- El metodo get muestra lo que envia el formulario en la url, se guarda en el historial(Ojo con contraseñas y demas). El metodo post no mueestra los campos completados en la url. Si no se pone nada, el metodo por defecto es el Get-->
+        <div>
+            <label for="fname">Nombre:</label>
+            <input id="fname" name="nombre" type="text"> <!--Para setear un valor le pongo el input Value-->
+        </div>
+        <div>
+            <label for="femail">Email:</label>
+            <input id="fmail" type="text" required placeholder = "Ingrese su mail">
+        </div>
+        <div>
+            <label for="fpassword">Contraseña:</label>
+            <input id="fpassword" type="password" required placeholder= "Ingrese su contraseña">
+        </div>
+        <div>
+            <input type="radio" id="curso-html" name="curso" value="HTML"><label for="curso-html">HTML</label>
+            <input type="radio" id="curso-css" name="curso" value="CSS"><label for="curso-css">CSS</label>
+            <!--La informacion que se envia al darle submit debe contener la etiqueta name.Lo que se envia es lo que esta contenido en la etiqueta Value-->
+        </div>
+
+        <input type="submit" value ="Enviar"> <!--El submit dispara la accion establecida en action(linea 12)-->
+        <input type="reset" value ="Borrar">
+    </form>
+</body>
+</html>

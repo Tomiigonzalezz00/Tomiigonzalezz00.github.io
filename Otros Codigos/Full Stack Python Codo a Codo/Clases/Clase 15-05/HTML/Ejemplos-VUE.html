@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos con Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="ejemplo2">
+        <h2>Ejemplo2</h2> <!-- Integracion VUE con html -->
+        <ul>
+             <li>Nombre: {{nombre}}</li>
+             <li>Apellido:{{apellido}}</li>
+             <li>Presentacion:{{detalles()}}</li>
+        </ul>
+    </div>
+
+    <div id="ejemplo3">
+        <div v-html="contenidoHTML"></div>
+        <img v-blind:src="imgSrc" v-blindAlt="imgAlt" width="200">
+
+    </div>
+    <script> //Todo esto puede estar en un JS exterior
+        const { createApp } = Vue;
+
+        const ejemplo2 = Vue.createApp({ /* Creacion de objeto Vue */
+            data(){ /* retorna propiedades */
+                return{
+                    nombre : "Tomas",
+                    apellido : "Gonzalez",
+                    direccion: "Buenos Aires"
+                }
+            },
+            methods:{
+                detalles(){
+                    return `Soy ${this.nombre} ${this.apellido}`; //Backticks, sirven para hcer interpolacion
+                }
+            }
+        }).mount('#ejemplo2'); //Monta el objeto vue con html, se integra con el div que tiene id "app"  
+
+        ejemplo2.nombre = "Tomas Nahuel"
+
+        const ejemplo3 = Vue.createApp({
+            data(){
+                return {
+                    contenidoHTML: `<div>
+                        <h2>imagen de la web</h2>
+                    </div>`,
+                    imgSrc: "images.png",
+                    imgAlt: "imagen de vue"
+              }
+            }
+        }).mount('#ejemplo3')
+
+    </script>
+</body>
+</html>

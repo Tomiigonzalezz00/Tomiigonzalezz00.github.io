@@ -1,0 +1,63 @@
+import Resolucion.*
+describe "Partido"{
+//Brasil = River - Paraguay = Boca
+	const river = new Equipo (esMundialista = true)
+	const boca = new Equipo (esMundialista = false)
+	const partido = new Partido (equipoLocal = river, equipoVisitante = boca )
+	
+	const villa = new Jugador(equipo = boca)
+	const rossi = new Jugador(equipo = boca)
+	const varela = new Jugador(equipo = boca)
+	const molina = new Jugador(equipo = boca)
+	const fabra = new Jugador(equipo = boca)	
+	const borja = new Jugador(equipo = river)
+	const perez = new Jugador(equipo = river)
+	const juanfer = new Jugador(equipo = river)
+	const armani = new Jugador(equipo = river)
+	const casco = new Jugador(equipo = river)
+	
+	
+	
+	const tirolibre = new Falta (equipo = boca ,intensidad = 80, jugadorGolpeador = villa , jugadorLastimado = juanfer, minutoDePartido = 10 , ultimoJugador= juanfer)
+	const jugadorInsulta = new Insulto (equipo = boca, jugadorQueInsulta= fabra ,insultos = ["puto","madre"], minutoDePartido = 50, ultimoJugador = armani)
+	const penal = new Falta (equipo = boca ,intensidad = 80, jugadorGolpeador = molina , jugadorLastimado = casco , minutoDePartido = 10 , ultimoJugador= perez)
+	const gol = new Jugadas (equipo = river, minutoDePartido = 5, ultimoJugador = perez) 
+	const pelea = new Pelea (equipo = boca, jugadoresQueIntervienen = [borja,perez,villa,rossi,varela,molina],minutoDePartido = 34, ultimoJugador = borja)
+	const seSacaLaCamiseta = new Festejo (equipo = river, minutoDePartido = 73, ultimoJugador = juanfer,circunstanciasEspeciales = ["festejo sacandose la camiseta"])
+	
+	const jugadoresRiver = [borja,perez,juanfer,armani,casco]
+	const jugadoresBoca = [villa,rossi,varela,molina,fabra]
+
+test "Gol de river a los 5' con Var modo Fifa "{
+	boca.jugadores(jugadoresBoca)
+	river.jugadores(jugadoresRiver)
+	var_.modoDeFuncionamiento(fifa)
+	gol.hizoGol() 
+	assert.equals(1,river.goles())
+}
+	
+test "villa comete un tiro libre para boca a los 10' y recibe amarilla "{
+	boca.jugadores(jugadoresBoca)
+	river.jugadores(jugadoresRiver)
+	tirolibre.sacarTarjeta() 
+	assert.equals(1,villa.tarjetas())
+}	
+	
+	
+test "Pelea al minuto 34' con tarjeta para todos"{
+	boca.jugadores(jugadoresBoca)
+	river.jugadores(jugadoresRiver)
+	pelea.sacarTarjeta()
+	assert.equals(2,partido.cantidadDeTarjetasDe(river))
+	assert.equals(4,partido.cantidadDeTarjetasDe(boca))
+}	
+		
+	
+	
+	
+}
+
+
+
+
+  

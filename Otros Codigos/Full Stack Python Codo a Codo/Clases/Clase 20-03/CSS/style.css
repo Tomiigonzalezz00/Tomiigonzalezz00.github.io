@@ -1,0 +1,24 @@
+/*CCS EXTERNO*/
+/*Entre mas generica la regla, menos fuerza tiene. El 1er parrafo de Titulo 1 tendra color azul por tener una regla especifica*/
+/*Esto es un Selector de tipos, en este caso establece regla general para parrafos*/
+div{
+    /*color: red;*/
+}
+p{
+    border: 3px solid green;
+    color: black;
+}
+h2{
+    font-size: 60px;
+}
+/* Selector a nivel de clases, en este caso hago la clase de fondo amarillo(Todo lo que quiera que tenga esta caracteristica va aca adentro) */
+.fondo-amarillo{
+    background-color: yellow;
+    color: red !important;
+    font-size: 20px;
+}
+
+/* Selector de Id, es el mas especifico de todos*/
+#mi-parrafo1{
+    background-color: yellowgreen;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/93217dd028.js" crossorigin="anonymous"></script>
+    <title>Trabaja con nosotros</title>
+</head>
+<body>
+    <header>
+        <nav> 
+            <nav>
+                <a href="index.html">Home</a> 
+                <a href="about.html">Acerca De</a>
+                <a href="contact.html">Contacto</a>   
+                <a href="store.html">Tienda</a>
+            </nav>
+            <h1 style="text-align:center;"><u><b>Forma parte de Superwiki</b></u></h1>
+    </header>
+    <main>
+        <h3 style="text-align:justify;">Completá tus datos debajo</h3>
+        <form action="Secciones/datos_enviados.html">
+            <div>
+                <label for="fname">Nombre:</label>
+                <input id="fname" name="nombre" type="text" required placeholder = "Ingrese su Nombre"><br><br>
+            </div>
+            <div>
+                <label for="femail">Apellido:</label>
+                <input id="fmail" name="apellido" type="text" required placeholder = "Ingrese su Apellido"><br></br>
+            </div>
+            <div>
+                <label for="fdirect">Direccion:</label>
+                <input id="fdirect" type="text" name="Direccion" required placeholder= "Ingrese su Direccion"> <br></br>
+            </div>
+            <div>
+                <label for="fcity">Ciudad:</label>
+                <input id="fcity" type="text" name="Ciudad" required placeholder= "Ingrese su Ciudad"> <br></br>
+            </div>
+            <div>
+                <label for="fcp">Codigo Postal: </label>
+                <input id="fcp" type="number" name="Codigo Postal" required placeholder= "Ingrese su Codigo Postal"> <br></br>
+            </div>
+            <div>
+                <label for="fbdate">Fecha de nacimiento: </label>
+                <input id="fbdate" type="date" name="Fecha de nacimiento" required> <br></br>
+            </div>
+            <div>
+                <label>Genero:</label>
+                <input type="radio" id="fhombre" name="Genero" value="Hombre" required><label for="fhombre">Hombre</label>
+                <input type="radio" id="fmujer" name="Genero" value="Mujer" required><label for="fmujer">Mujer</label>
+                <input type="radio" id="fotro" name="Genero" value="Otro"   required><label for="fotro">Otro</label><br></br>
+            </div>
+            <div>
+                <label>Estudios: </label>
+                <input id="fsprimaria" type="checkbox" name="Estudios" ><label for="fprimaria">Primaria</label>
+                <input id="fsecundaria" type="checkbox" name="Estudios" ><label for="fprimaria">Secundaria</label>
+                <input id="funiversidad" type="checkbox" name="Estudios" ><label for="fprimaria">Universidad</label>
+                <input id="fotro" type="checkbox" name="Estudios" ><label for="fprimaria">Otro</label>
+            </div>
+            <div>
+                <input type="submit" value ="Enviar"> 
+                <input type="reset" value ="Borrar">
+            </div>
+        </form>
+        
+    </main>
+    <footer style="text-align: center;">
+        <a href="https://es-la.facebook.com" target="_blank"><i class="fa-brands fa-facebook" aria-hidden="true"> </i></a>
+        <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <div>
+            <img src="../Imagenes/Superwiki.png" alt="Logo" widt="50" height="50">
+        </div>
+        <a href="form.html">RRHH</a>
+        <p>©Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

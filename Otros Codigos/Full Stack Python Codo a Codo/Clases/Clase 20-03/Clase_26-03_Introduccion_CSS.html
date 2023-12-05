@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion a CSS</title>
+    <link rel="stylesheet" href="CSS/style.css"><!--Se puede poner en el head dentro del archivo HTML o en otro archivo aparte de CSS, para hacer referencia al archivo CSS uso esta linea--> 
+    <!--<style>
+        /*CSS INTERNO*/
+         /*Entre mas generica la regla, menos fuerza tiene. El 1er parrafo de Titulo 1 tendra color azul por tener una regla especifica*/
+        /*Esto es un selector de tipos, en este caso establece regla general para parrafos*/
+        div{
+            color: red;
+        }
+        p{
+            border: 3px solid green;
+            color: black;
+        }
+    </style>
+    -->
+</head>
+<body>
+    <div>
+        <h2>Titulo 1</h2>
+        <p style="color: blue;" class="fondo-amarillo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius nemo! Et repellat itaque sunt rem vero voluptates excepturi alias. Repudiandae quod, dolor sint possimus minus quae nihil illum facilis.</p>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius nemo! Et repellat itaque sunt rem vero voluptates excepturi alias. Repudiandae quod, dolor sint possimus minus quae nihil illum facilis.</p>
+    </div>
+    <div>
+        <h2 class="fondo-amarillo" >Titulo 2</h2>
+        <p  style="color: blue;" class="fondo-amarillo" id="mi-parrafo1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius nemo! Et repellat itaque sunt rem vero voluptates excepturi alias. Repudiandae quod, dolor sint possimus minus quae nihil illum facilis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius nemo! Et repellat itaque sunt rem vero voluptates excepturi alias. Repudiandae quod, dolor sint possimus minus quae nihil illum facilis.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo en vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{msj}}</h1> <!-- Integracion VUE con html -->
+    </div>
+    <script> //Todo esto puede estar en un JS exterior
+        const {createApp} = Vue;
+
+        const app = Vue.createApp({ /* Creacion de objeto Vue */
+            data(){ /* retorna propiedades */
+                return{
+                    msj: "Hola Mundo"
+                }
+            }
+        }).mount('#app') //Monta el objeto vue con html, se integra con el div que tiene id "app"  
+    </script>
+</body>
+</html>

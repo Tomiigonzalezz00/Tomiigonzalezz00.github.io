@@ -1,0 +1,44 @@
+:root{
+    font-size: 16px;
+}
+html{
+    font-size: 24px; /*Tamaño fuente de todo la pagina*/
+    /*background-color: grey;/*Color de toda la pagina*/
+    background-image: url("../Imagenes/fondo.jpg");/*Imagen de fondo de la pagina*/
+}
+
+
+div{
+    border: green solid 3px;
+}
+
+h1{
+    font-size: 2rem;/*Medida relativa, en relacion a lo establecido en root*/
+}
+h2{
+    font-size: 32px;
+}
+
+h3{
+    font-size: 4em; /*hace referencia al elemento contenedor, en este caso como forma parte del HTML, su tamaño sera 4*24 */
+}
+
+h4{
+    font-size: 2rem;/*Cambia con que relaciono la medida relativa, si cambia el tamaño fuente del navegador, todos los elementos cambian de manera proporcional*/
+}
+
+.fondo-amarillo{
+    background-color: yellow;
+    border: 0;
+    width: 50%; /*La medida es relativa al ancho del viewport, si fuera absoluta seria width=50cm*/
+}
+
+#p1{
+    background-color: #FF0A00;
+}
+#p2{
+    background-color: rgb(255, 10, 00);
+}
+#p3{
+    background-color: rgb(255, 10, 00,0.5);/*El ultimo valor representa la transparencia del color, se llama canal alfa y el valor es de 0 a 100(100 es 1, el maximo)*/
+}

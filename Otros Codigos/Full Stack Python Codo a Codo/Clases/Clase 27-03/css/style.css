@@ -1,0 +1,24 @@
+/* Este es el selector mas general , afecta a todos de forma generica*/
+*{
+    margin:0; /*Quita los margenes a todos los elementos*/
+    padding: 0; 
+    box-sizing:  border-box ;/* Toma como referencia el valor del contenido de la caja. El contenido de la caja toma como referencia el valor del contenedor. Solo toma en cuenta el contenido y no el del contenedor */
+}
+    
+div{
+    width: 80%; /* porcentaje del ancho del bloque */ 
+    height: auto; /*Se modifica el alto de forma automatica dependiendo del contenido*/
+    max-height: 100px;/*establezco un alto maximo, puede ser minimo con min-height*/
+    margin: 50px 20px 50px; /* Si pongo 1 solo valor, es para todos. Si pongo 2, el primero es arriba/abajo y el segundo izquierda/derecha . Si pongo 2, el primero es para arriba, el segundo izquierda/derecha y el tercero para el margen inferior. Si pongo 4, es uno para cada margen*/
+    margin-top: 20px;/* Cambia solo el margen superior */
+    overflow-y: auto; /* Si hay un desbordamiento de contenido(mas contenido del que puede contener el contenedor), se va a ver o se va a ocultar(hidden visible, scroll(aparecen las barras),auto(aparece la barra si es necesaria) la barra ya no se usa mucho, es obsoleto. Con el auto, el scroll aparece solo si es necesario dependiendo del viewport (la X es Y definene el eje). Se utiliza para "preguntas Frecuentes" por ejemplo y sino se clickea y despliega.*/
+}
+p{
+    margin: 20px 0px;
+    border: 1px red solid; /* si no quiero borde, va un 0 */
+    border-bottom: 3px blue solid; /* Atajo solo en un borde, en este caso solo el inferior */
+
+}
+.mi-parrafo{
+    background-color: green;
+}
